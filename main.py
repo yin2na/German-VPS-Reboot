@@ -145,7 +145,7 @@ if __name__ == "__main__":
         SERVERS = get_servers(sessid, s)
         print("检测到第 {} 个账号有 {} 台VPS，正在尝试续期".format(i + 1, len(SERVERS)))
         for k, v in SERVERS.items():
-	    srvId = '***' + k[3:6]
+            srvId = '***' + k[3:6]
             if v:
                 if not renew(sessid, s, passwd_list[i], k):
                     print("ServerID: %s Renew Error!" % srvId)
